@@ -10,7 +10,12 @@ const PATHS = {
 };
 
 const common = {
-    entry: path.join(PATHS.app, 'index.jsx'),
+    entry: {
+        app: PATHS.app
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     output: {
         path: PATHS.build,
         filename: 'bundle.js'
